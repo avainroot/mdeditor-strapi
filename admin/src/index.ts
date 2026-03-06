@@ -21,7 +21,7 @@ export default {
       components: {
         Input: async () =>
           import('./components/MdEditorInput').then((module) => ({
-            default: module,
+            default: module.MdEditorInput,
           })),
       },
     });
