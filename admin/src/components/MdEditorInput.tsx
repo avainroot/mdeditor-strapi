@@ -1,6 +1,5 @@
 import { MDEditor } from "@rootflow/mdeditor"
 import { Field } from "@strapi/design-system"
-import { useIntl } from "react-intl"
 
 import type { MessageDescriptor } from 'react-intl'
 
@@ -31,10 +30,9 @@ interface MdEditorInputProps {
 }
 
 const MdEditorInput = ({ attribute, name, value, onChange, disabled, required, error, hint, intlLabel }: MdEditorInputProps) => {
-  const { formatMessage } = useIntl()
   return (
     <Field.Root name={name} required={required} error={error} hint={hint}>
-      <Field.Label>{formatMessage(intlLabel)}</Field.Label>
+      <Field.Label>{intlLabel?.defaultMessage ?? name}</Field.Label>
       <MDEditor
         value={value ?? ""}
         onChange={(val: string) =>
