@@ -1,7 +1,8 @@
 // import { getTranslation } from "./utils/getTranslation";
 import { PLUGIN_ID } from './pluginId';
 import { Initializer } from './components/Initializer';
-import { PluginIcon } from './components/PluginIcon';
+// import { PluginIcon } from './components/PluginIcon';
+import { IndentIncrease } from '@strapi/icons';
 
 export default {
   register(app: any) {
@@ -9,6 +10,17 @@ export default {
       name: 'mdeditor',
       pluginId: PLUGIN_ID,
       type: 'text',
+      options: [
+        {
+          intlLabel: { id: 'mdeditor.options.required', defaultMessage: 'Required' },
+          description: {
+            id: 'mdeditor.options.required.desc',
+            defaultMessage: 'Makes the field required',
+          },
+          name: 'required',
+          type: 'checkbox',
+        },
+      ],
       intlLabel: {
         id: `${PLUGIN_ID}.field.label`,
         defaultMessage: 'Markdown Editor',
@@ -17,7 +29,7 @@ export default {
         id: `${PLUGIN_ID}.field.description`,
         defaultMessage: 'A markdown editor with live preview',
       },
-      icon: PluginIcon,
+      icon: IndentIncrease,
       components: {
         Input: async () =>
           import('./components/MdEditorInput').then((module) => ({
