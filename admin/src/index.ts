@@ -10,17 +10,28 @@ export default {
       name: 'mdeditor',
       pluginId: PLUGIN_ID,
       type: 'text',
-      options: [
-        {
-          intlLabel: { id: 'mdeditor.options.required', defaultMessage: 'Required' },
-          description: {
-            id: 'mdeditor.options.required.desc',
-            defaultMessage: 'Makes the field required',
+      options: {
+        advanced: [
+          {
+            sectionTitle: null,
+            items: [
+              {
+                name: 'required',
+                type: 'checkbox',
+                intlLabel: {
+                  id: 'form.attribute.item.requiredField',
+                  defaultMessage: 'Required field',
+                },
+                description: {
+                  id: 'form.attribute.item.requiredField.description',
+                  defaultMessage: "You won't be able to create an entry if this field is empty",
+                },
+              },
+            ],
           },
-          name: 'required',
-          type: 'checkbox',
-        },
-      ],
+        ],
+        validator: () => ({}),
+      },
       intlLabel: {
         id: `${PLUGIN_ID}.field.label`,
         defaultMessage: 'Markdown Editor',
