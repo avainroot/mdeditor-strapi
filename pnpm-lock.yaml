@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@rootflow/mdeditor':
-        specifier: ^0.2.4
-        version: 0.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^0.2.5
+        version: 0.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@strapi/design-system':
         specifier: ^2.0.0-rc.30
@@ -2091,8 +2091,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rootflow/mdeditor@0.2.4':
-    resolution: {integrity: sha512-MtKWgbebFhTeN0f7UjWniB0PyB5UOA3ik+Wf88/cqmf2BtJDFmoJL8lsKDrKaaIIUxRlIqiHYNWs8As1bwt8ag==}
+  '@rootflow/mdeditor@0.2.5':
+    resolution: {integrity: sha512-B4zdtN278ZwcSNEoxOsm3Ru6Uc+WrC+6P7G1GrSuJPxQqTtEQarpHFzlmLJVM8A4XxEUJvqqRkVt1gFFUyXhKA==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
@@ -9025,7 +9025,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.59.0':
     optional: true
 
-  '@rootflow/mdeditor@0.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@rootflow/mdeditor@0.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@codemirror/commands': 6.10.2
       '@codemirror/lang-markdown': 6.5.0
