@@ -37,7 +37,7 @@
     "test:ts:back": "run -T tsc -p server/tsconfig.json"
   },
   "dependencies": {
-    "@rootflow/mdeditor": "^0.2.6"
+    "@rootflow/mdeditor": "^0.2.7"
   },
   "devDependencies": {
     "@strapi/design-system": "^2.0.0-rc.30",
